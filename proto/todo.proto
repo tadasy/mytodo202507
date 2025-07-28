@@ -1,0 +1,99 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/tadasy/todo-app/proto";
+
+service TodoService {
+  rpc CreateTodo(CreateTodoRequest) returns (CreateTodoResponse);
+  rpc GetTodo(GetTodoRequest) returns (GetTodoResponse);
+  rpc ListTodos(ListTodosRequest) returns (ListTodosResponse);
+  rpc UpdateTodo(UpdateTodoRequest) returns (UpdateTodoResponse);
+  rpc DeleteTodo(DeleteTodoRequest) returns (DeleteTodoResponse);
+  rpc MarkTodoComplete(MarkTodoCompleteRequest) returns (MarkTodoCompleteResponse);
+  rpc ListCompletedTodos(ListCompletedTodosRequest) returns (ListCompletedTodosResponse);
+}
+
+message Todo {
+  string id = 1;
+  string user_id = 2;
+  string title = 3;
+  string description = 4;
+  bool completed = 5;
+  string created_at = 6;
+  string updated_at = 7;
+  string completed_at = 8;
+}
+
+message CreateTodoRequest {
+  string user_id = 1;
+  string title = 2;
+  string description = 3;
+}
+
+message CreateTodoResponse {
+  Todo todo = 1;
+  string error = 2;
+}
+
+message GetTodoRequest {
+  string id = 1;
+  string user_id = 2;
+}
+
+message GetTodoResponse {
+  Todo todo = 1;
+  string error = 2;
+}
+
+message ListTodosRequest {
+  string user_id = 1;
+  bool completed_only = 2;
+}
+
+message ListTodosResponse {
+  repeated Todo todos = 1;
+  string error = 2;
+}
+
+message UpdateTodoRequest {
+  string id = 1;
+  string user_id = 2;
+  string title = 3;
+  string description = 4;
+}
+
+message UpdateTodoResponse {
+  Todo todo = 1;
+  string error = 2;
+}
+
+message DeleteTodoRequest {
+  string id = 1;
+  string user_id = 2;
+}
+
+message DeleteTodoResponse {
+  bool success = 1;
+  string error = 2;
+}
+
+message MarkTodoCompleteRequest {
+  string id = 1;
+  string user_id = 2;
+  bool completed = 3;
+}
+
+message MarkTodoCompleteResponse {
+  Todo todo = 1;
+  string error = 2;
+}
+
+message ListCompletedTodosRequest {
+  string user_id = 1;
+}
+
+message ListCompletedTodosResponse {
+  repeated Todo todos = 1;
+  string error = 2;
+}
