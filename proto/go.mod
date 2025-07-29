@@ -1,4 +1,4 @@
-module github.com/tadasy/todo-app/proto
+module github.com/tadasy/mytodo202507/proto
 
 go 1.23.0
 
@@ -10,7 +10,6 @@ require (
 )
 
 require (
-	github.com/golang/protobuf v1.5.4 // indirect
 	golang.org/x/net v0.42.0 // indirect
 	golang.org/x/sys v0.34.0 // indirect
 	golang.org/x/text v0.27.0 // indirect

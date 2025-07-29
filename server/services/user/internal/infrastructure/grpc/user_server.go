@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	pb "github.com/tadasy/todo-app/proto"
-	"github.com/tadasy/todo-app/server/services/user/internal/domain/service"
+	pb "github.com/tadasy/mytodo202507/proto"
+	"github.com/tadasy/mytodo202507/server/services/user/internal/domain/service"
 )
 
 type UserServer struct {

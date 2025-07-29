@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/tadasy/todo-app/server/services/user/internal/domain/entity"
+	"github.com/tadasy/mytodo202507/server/services/user/internal/domain/entity"
 )
 
 type UserRepository interface {

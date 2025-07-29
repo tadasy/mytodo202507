@@ -944,7 +944,7 @@ const file_proto_todo_proto_rawDesc = "" +
 	"\n" +
 	"DeleteTodo\x12\x18.proto.DeleteTodoRequest\x1a\x19.proto.DeleteTodoResponse\x12S\n" +
 	"\x10MarkTodoComplete\x12\x1e.proto.MarkTodoCompleteRequest\x1a\x1f.proto.MarkTodoCompleteResponse\x12Y\n" +
-	"\x12ListCompletedTodos\x12 .proto.ListCompletedTodosRequest\x1a!.proto.ListCompletedTodosResponseB\"Z github.com/tadasy/todo-app/protob\x06proto3"
+	"\x12ListCompletedTodos\x12 .proto.ListCompletedTodosRequest\x1a!.proto.ListCompletedTodosResponseB&Z$github.com/tadasy/mytodo202507/protob\x06proto3"
 
 var (
 	file_proto_todo_proto_rawDescOnce sync.Once

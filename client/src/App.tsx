@@ -47,7 +47,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <AuthProvider>
-      <div className="App">
+      <div className="min-h-screen bg-background text-foreground">
         <RouterProvider router={router} />
         <Toaster />
       </div>
