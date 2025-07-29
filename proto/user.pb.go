@@ -668,7 +668,7 @@ const file_proto_user_proto_rawDesc = "" +
 	"\n" +
 	"UpdateUser\x12\x18.proto.UpdateUserRequest\x1a\x19.proto.UpdateUserResponse\x12A\n" +
 	"\n" +
-	"DeleteUser\x12\x18.proto.DeleteUserRequest\x1a\x19.proto.DeleteUserResponseB\"Z github.com/tadasy/todo-app/protob\x06proto3"
+	"DeleteUser\x12\x18.proto.DeleteUserRequest\x1a\x19.proto.DeleteUserResponseB&Z$github.com/tadasy/mytodo202507/protob\x06proto3"
 
 var (
 	file_proto_user_proto_rawDescOnce sync.Once

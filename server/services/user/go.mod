@@ -1,4 +1,4 @@
-module github.com/tadasy/todo-app/server/services/user
+module github.com/tadasy/mytodo202507/server/services/user
 
 go 1.23.0
 
@@ -7,15 +7,14 @@ toolchain go1.24.5
 require (
 	github.com/google/uuid v1.6.0
 	github.com/mattn/go-sqlite3 v1.14.17
-	github.com/tadasy/todo-app/proto v0.0.0-00010101000000-000000000000
+	github.com/tadasy/mytodo202507/proto v0.0.0-00010101000000-000000000000
 	golang.org/x/crypto v0.40.0
 	google.golang.org/grpc v1.74.2
 )
 
-replace github.com/tadasy/todo-app/proto => ../../../proto
+replace github.com/tadasy/mytodo202507/proto => ../../../proto
 
 require (
-	github.com/golang/protobuf v1.5.4 // indirect
 	golang.org/x/net v0.42.0 // indirect
 	golang.org/x/sys v0.34.0 // indirect
 	golang.org/x/text v0.27.0 // indirect

@@ -5,7 +5,7 @@ import (
 	"time"
 
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/tadasy/todo-app/server/services/todo/internal/domain/entity"
+	"github.com/tadasy/mytodo202507/server/services/todo/internal/domain/entity"
 )
 
 type SQLiteTodoRepository struct {

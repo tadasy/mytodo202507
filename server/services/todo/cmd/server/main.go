@@ -6,10 +6,10 @@ import (
 
 	"google.golang.org/grpc"
 
-	pb "github.com/tadasy/todo-app/proto"
-	"github.com/tadasy/todo-app/server/services/todo/internal/domain/service"
-	"github.com/tadasy/todo-app/server/services/todo/internal/infrastructure/database"
-	grpcServer "github.com/tadasy/todo-app/server/services/todo/internal/infrastructure/grpc"
+	pb "github.com/tadasy/mytodo202507/proto"
+	"github.com/tadasy/mytodo202507/server/services/todo/internal/domain/service"
+	"github.com/tadasy/mytodo202507/server/services/todo/internal/infrastructure/database"
+	grpcServer "github.com/tadasy/mytodo202507/server/services/todo/internal/infrastructure/grpc"
 )
 
 func main() {

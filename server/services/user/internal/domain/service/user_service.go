@@ -4,8 +4,8 @@ import (
 	"errors"
 
 	"github.com/google/uuid"
-	"github.com/tadasy/todo-app/server/services/user/internal/domain/entity"
-	"github.com/tadasy/todo-app/server/services/user/internal/domain/repository"
+	"github.com/tadasy/mytodo202507/server/services/user/internal/domain/entity"
+	"github.com/tadasy/mytodo202507/server/services/user/internal/domain/repository"
 )
 
 type UserService struct {

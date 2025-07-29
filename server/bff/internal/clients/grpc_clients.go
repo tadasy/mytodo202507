@@ -8,8 +8,8 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	pb "github.com/tadasy/todo-app/proto"
-	"github.com/tadasy/todo-app/server/bff/internal/models"
+	pb "github.com/tadasy/mytodo202507/proto"
+	"github.com/tadasy/mytodo202507/server/bff/internal/models"
 )
 
 type UserServiceClient struct {

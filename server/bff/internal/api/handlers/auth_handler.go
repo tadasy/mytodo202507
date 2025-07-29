@@ -7,9 +7,9 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/labstack/echo/v4"
 
-	"github.com/tadasy/todo-app/server/bff/internal/api/middleware"
-	"github.com/tadasy/todo-app/server/bff/internal/clients"
-	"github.com/tadasy/todo-app/server/bff/internal/models"
+	"github.com/tadasy/mytodo202507/server/bff/internal/api/middleware"
+	"github.com/tadasy/mytodo202507/server/bff/internal/clients"
+	"github.com/tadasy/mytodo202507/server/bff/internal/models"
 )
 
 type AuthHandler struct {

@@ -2,8 +2,8 @@ package service
 
 import (
 	"github.com/google/uuid"
-	"github.com/tadasy/todo-app/server/services/todo/internal/domain/entity"
-	"github.com/tadasy/todo-app/server/services/todo/internal/domain/repository"
+	"github.com/tadasy/mytodo202507/server/services/todo/internal/domain/entity"
+	"github.com/tadasy/mytodo202507/server/services/todo/internal/domain/repository"
 )
 
 type TodoService struct {

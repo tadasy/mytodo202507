@@ -1,4 +1,4 @@
-module github.com/tadasy/todo-app/server/bff
+module github.com/tadasy/mytodo202507/server/bff
 
 go 1.23.0
 
@@ -7,15 +7,14 @@ toolchain go1.24.5
 require (
 	github.com/golang-jwt/jwt/v5 v5.0.0
 	github.com/labstack/echo/v4 v4.11.2
-	github.com/tadasy/todo-app/proto v0.0.0-00010101000000-000000000000
+	github.com/tadasy/mytodo202507/proto v0.0.0-00010101000000-000000000000
 	google.golang.org/grpc v1.74.2
 )
 
-replace github.com/tadasy/todo-app/proto => ../../proto
+replace github.com/tadasy/mytodo202507/proto => ../../proto
 
 require (
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
-	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect

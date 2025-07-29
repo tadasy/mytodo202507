@@ -6,9 +6,9 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 
-	"github.com/tadasy/todo-app/server/bff/internal/api/handlers"
-	customMiddleware "github.com/tadasy/todo-app/server/bff/internal/api/middleware"
-	"github.com/tadasy/todo-app/server/bff/internal/clients"
+	"github.com/tadasy/mytodo202507/server/bff/internal/api/handlers"
+	customMiddleware "github.com/tadasy/mytodo202507/server/bff/internal/api/middleware"
+	"github.com/tadasy/mytodo202507/server/bff/internal/clients"
 )
 
 func main() {

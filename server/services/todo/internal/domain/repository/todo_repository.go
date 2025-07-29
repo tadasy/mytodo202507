@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/tadasy/todo-app/server/services/todo/internal/domain/entity"
+	"github.com/tadasy/mytodo202507/server/services/todo/internal/domain/entity"
 )
 
 type TodoRepository interface {

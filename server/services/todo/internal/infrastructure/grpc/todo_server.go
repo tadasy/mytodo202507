@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	pb "github.com/tadasy/todo-app/proto"
-	"github.com/tadasy/todo-app/server/services/todo/internal/domain/entity"
-	"github.com/tadasy/todo-app/server/services/todo/internal/domain/service"
+	pb "github.com/tadasy/mytodo202507/proto"
+	"github.com/tadasy/mytodo202507/server/services/todo/internal/domain/entity"
+	"github.com/tadasy/mytodo202507/server/services/todo/internal/domain/service"
 )
 
 type TodoServer struct {
