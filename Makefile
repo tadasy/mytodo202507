@@ -8,7 +8,7 @@ NODE_PROCESSES := "npm run dev" "vite.*client" "node.*todo.*client"
 # Protocol Buffers compilation
 proto:
 	@echo "Compiling protocol buffers..."
-	protoc --go_out=. --go-grpc_out=. proto/*.proto
+	protoc --go_out=proto --go_opt=module=github.com/tadasy/todo-app/proto --go-grpc_out=proto --go-grpc_opt=module=github.com/tadasy/todo-app/proto proto/*.proto
 
 # Build all services
 build:
