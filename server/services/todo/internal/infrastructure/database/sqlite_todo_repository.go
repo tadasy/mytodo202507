@@ -49,11 +49,12 @@ func (r *SQLiteTodoRepository) Create(todo *entity.Todo) error {
 
 	var completedAt interface{}
 	if todo.CompletedAt != nil {
-		completedAt = todo.CompletedAt
+		completedAt = todo.CompletedAt.Format(time.RFC3339)
 	}
 
 	_, err := r.db.Exec(query, todo.ID, todo.UserID, todo.Title, todo.Description,
-		todo.Completed, todo.CreatedAt, todo.UpdatedAt, completedAt)
+		todo.Completed, todo.CreatedAt.Format(time.RFC3339),
+		todo.UpdatedAt.Format(time.RFC3339), completedAt)
 	return err
 }
 
@@ -119,11 +120,11 @@ func (r *SQLiteTodoRepository) Update(todo *entity.Todo) error {
 
 	var completedAt interface{}
 	if todo.CompletedAt != nil {
-		completedAt = todo.CompletedAt
+		completedAt = todo.CompletedAt.Format(time.RFC3339)
 	}
 
 	_, err := r.db.Exec(query, todo.Title, todo.Description, todo.Completed,
-		todo.UpdatedAt, completedAt, todo.ID, todo.UserID)
+		todo.UpdatedAt.Format(time.RFC3339), completedAt, todo.ID, todo.UserID)
 	return err
 }
 
@@ -144,11 +145,11 @@ func (r *SQLiteTodoRepository) scanTodo(row *sql.Row) (*entity.Todo, error) {
 		return nil, err
 	}
 
-	todo.CreatedAt, _ = time.Parse("2006-01-02 15:04:05", createdAt)
-	todo.UpdatedAt, _ = time.Parse("2006-01-02 15:04:05", updatedAt)
+	todo.CreatedAt, _ = time.Parse(time.RFC3339, createdAt)
+	todo.UpdatedAt, _ = time.Parse(time.RFC3339, updatedAt)
 
 	if completedAt.Valid {
-		parsedTime, _ := time.Parse("2006-01-02 15:04:05", completedAt.String)
+		parsedTime, _ := time.Parse(time.RFC3339, completedAt.String)
 		todo.CompletedAt = &parsedTime
 	}
 
@@ -166,11 +167,11 @@ func (r *SQLiteTodoRepository) scanTodoFromRows(rows *sql.Rows) (*entity.Todo, e
 		return nil, err
 	}
 
-	todo.CreatedAt, _ = time.Parse("2006-01-02 15:04:05", createdAt)
-	todo.UpdatedAt, _ = time.Parse("2006-01-02 15:04:05", updatedAt)
+	todo.CreatedAt, _ = time.Parse(time.RFC3339, createdAt)
+	todo.UpdatedAt, _ = time.Parse(time.RFC3339, updatedAt)
 
 	if completedAt.Valid {
-		parsedTime, _ := time.Parse("2006-01-02 15:04:05", completedAt.String)
+		parsedTime, _ := time.Parse(time.RFC3339, completedAt.String)
 		todo.CompletedAt = &parsedTime
 	}
 
