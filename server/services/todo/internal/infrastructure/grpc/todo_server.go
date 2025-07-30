@@ -41,8 +41,13 @@ func (s *TodoServer) GetTodo(ctx context.Context, req *pb.GetTodoRequest) (*pb.G
 		}, nil
 	}
 
+	var pbTodo *pb.Todo
+	if todo != nil {
+		pbTodo = s.todoToProto(todo)
+	}
+
 	return &pb.GetTodoResponse{
-		Todo: s.todoToProto(todo),
+		Todo: pbTodo,
 	}, nil
 }
 
