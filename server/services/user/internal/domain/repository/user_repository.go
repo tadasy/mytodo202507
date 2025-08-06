@@ -1,7 +1,13 @@
 package repository
 
 import (
+	"errors"
+
 	"github.com/tadasy/mytodo202507/server/services/user/internal/domain/entity"
+)
+
+var (
+	ErrUserNotFound = errors.New("user not found")
 )
 
 type UserRepository interface {
